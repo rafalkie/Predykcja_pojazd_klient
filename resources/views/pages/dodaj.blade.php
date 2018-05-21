@@ -26,7 +26,7 @@
                     </div>
                 <div class="form-group">
                     <div class="col-md-4 control-label">
-                        {!! Form::label('odleglosc','Odległość:')!!}
+                        {!! Form::label('odleglosc','Odległość(km) :')!!}
                     </div>
                     <div class="col-md-6">
                         {!! Form::text('odleglosc',null,['class'=>'form-control' ]) !!}
@@ -37,7 +37,7 @@
                         {!! Form::label('wlasny_samochod','Własny samochód:')!!}
                     </div>
                     <div class="col-md-6">
-                        {{ Form::select('wlasny_samochod', ['TAK', 'NIE']) }}
+                        {{ Form::select('wlasny_samochod', ['NIE', 'TAK']) }}
                     </div>
                 </div>
                 <div class="form-group">
@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-4 control-label">
-                        {!! Form::label('dochod','Dochód:')!!}
+                        {!! Form::label('dochod','Dochód(zł) :')!!}
                     </div>
                     <div class="col-md-6">
                         {!! Form::text('dochod',null,['class'=>'form-control' ]) !!}
