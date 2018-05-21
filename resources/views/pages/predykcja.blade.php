@@ -1,13 +1,12 @@
 @extends('master')
 @section('content')
-
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="card">
                 <div class="panel-body">
                     <!-- Formularz -->
 
-                    {!! Form::open(['wiek'=>'people','class'=>'form-horizontal']) !!}
+                    {!! Form::open(['url'=>'predykcja','class'=>'form-horizontal']) !!}
                     <div class="form-group">
                         <div class="col-md-4 control-label">
                             {!! Form::label('wiek','Wiek:')!!}
@@ -22,12 +21,12 @@
                             {!! Form::label('plec','Płeć:')!!}
                         </div>
                         <div class="col-md-6">
-                            {!! Form::text('plec',null,['class'=>'form-control' ]) !!}
+                            {{ Form::select('plec', ['M', 'K']) }}
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-4 control-label">
-                            {!! Form::label('odleglosc','Odległość:')!!}
+                            {!! Form::label('odleglosc','Odległość(km) :')!!}
                         </div>
                         <div class="col-md-6">
                             {!! Form::text('odleglosc',null,['class'=>'form-control' ]) !!}
@@ -38,7 +37,7 @@
                             {!! Form::label('wlasny_samochod','Własny samochód:')!!}
                         </div>
                         <div class="col-md-6">
-                            {!! Form::text('wlasny_samochod',null,['class'=>'form-control' ]) !!}
+                            {{ Form::select('wlasny_samochod', ['NIE', 'TAK']) }}
                         </div>
                     </div>
                     <div class="form-group">
@@ -46,28 +45,21 @@
                             {!! Form::label('wyksztalcenie','Wykształcenie:')!!}
                         </div>
                         <div class="col-md-6">
-                            {!! Form::text('wyksztalcenie',null,['class'=>'form-control' ]) !!}
+                            {{ Form::select('wyksztalcenie', ['Podstawowe', 'Gimnazjalne','Zasadnicze','Średnie','Wyższe']) }}
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-4 control-label">
-                            {!! Form::label('dochod','Dochód:')!!}
+                            {!! Form::label('dochod','Dochód(zł) :')!!}
                         </div>
                         <div class="col-md-6">
                             {!! Form::text('dochod',null,['class'=>'form-control' ]) !!}
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="col-md-4 control-label">
-                            {!! Form::label('pojazd_id','Środek Transportu:')!!}
-                        </div>
-                        <div class="col-md-6">
-                            {!! Form::text('pojazd_id',null,['class'=>'form-control' ]) !!}
-                        </div>
-                    </div>
+
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
-                            {!! Form::submit('Dodaj osobe',null,['class'=>'btn btn-primary' ]) !!}
+                            {!! Form::submit('Sprawdz czym pojedzie',['class'=>'btn btn-primary' ]) !!}
                         </div>
                     </div>
                     {!! Form::close() !!}
