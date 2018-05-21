@@ -16,11 +16,7 @@ class CreatePojazdTable extends Migration
         Schema::create('pojazd', function (Blueprint $table) {
 
             $table->increments('id');
-            $table->integer('samochod');
-            $table->integer('autobus');
-            $table->integer('taxi');
-            $table->integer('samolot');
-            $table->integer('pociag');
+            $table->string('nazwa');
             $table->timestamps();
         });
     }

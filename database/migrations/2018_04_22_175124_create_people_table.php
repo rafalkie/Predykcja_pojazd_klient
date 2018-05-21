@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOsobaTable extends Migration
+class CreatePeopleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateOsobaTable extends Migration
      */
     public function up()
     {
-        Schema::create('osoba', function (Blueprint $table) {
+        Schema::create('people', function (Blueprint $table) {
 
             $table->increments('id');
             $table->integer('wiek');
@@ -35,6 +35,6 @@ class CreateOsobaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('osoba');
+        Schema::dropIfExists('people');
     }
 }

@@ -14,5 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/', 'PagesController@main');
 Route::get('/predykcja', 'PagesController@predykcja');
+
+Route::get('/dodaj', 'PeopleController@dodaj');
+Route::post('/dodaj', 'PeopleController@store');
