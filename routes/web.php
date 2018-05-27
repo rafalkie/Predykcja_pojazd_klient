@@ -17,6 +17,14 @@ Route::get('/', function () {
 Route::get('/', 'PagesController@main');
 Route::get('/predykcja', 'PredykcjaController@predykcja');
 Route::post('/predykcja', 'PredykcjaController@store');
+Route::get('/wynik', 'PredykcjaController@store');
 
 Route::get('/dodaj', 'PeopleController@dodaj');
 Route::post('/dodaj', 'PeopleController@store');
+
+
+
+Auth::routes();
+
+
+Route::get('/home', 'HomeController@index')->name('home');

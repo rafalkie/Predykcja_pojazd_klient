@@ -13,6 +13,9 @@ use DB;
 class PeopleController extends Controller
 {
 
+    public function __construct(){
+        $this->middleware('auth',['only'=>['dodaj']]);
+    }
 
 
    public function dodaj(){

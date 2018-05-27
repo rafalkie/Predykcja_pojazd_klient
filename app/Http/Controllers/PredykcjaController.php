@@ -25,6 +25,7 @@ class PredykcjaController extends Controller
         $pociag=0;
         $taxi=0;
         $samolot=0;
+        $samolotPom=0;
         $samochod=0;
         $suma=0;
 
@@ -81,8 +82,22 @@ class PredykcjaController extends Controller
         if($autobus!=0) $autobus=($autobus/$suma)*100;
         if($pociag!=0) $pociag=($pociag/$suma)*100;
         if($taxi!=0) $taxi=($taxi/$suma)*100;
-        if($samolot!=0) $samolot=($samolot/$suma)*100;
-        echo 'autobys =',$autobus , ' % pociag =',$pociag,' % taxt =',$taxi,' % samolot =',$samolot,' % samochod=', $samochod,' %';
+        if($samolot!=0)
+        {   if($odleglosc<5){                   /// Jeżeli odległość mniejsza od 5 a tu według naszej skali to 100 km to dzieli procenty predykcji samolotu przez 4
+            $samolotPom=(($samolot/$suma)*100)/5;
+            $samolot=$samolotPom;
+            $samochod +=$samolotPom;
+            $autobus +=$samolotPom;
+            $pociag +=$samolotPom;
+            $taxi +=$samolotPom;}
+            else{
+            $samolot=(($samolot/$suma)*100);
+            }
+        }
+
+        return view('pages.wynik',compact('autobus','pociag','taxi','samolot','samochod'));
+
+
     }
 
 }

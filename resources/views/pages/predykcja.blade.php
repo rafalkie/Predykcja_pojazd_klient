@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-sm-12 ">
             <div class="card">
                 <div class="panel-body">
                     <!-- Formularz -->
@@ -59,7 +59,7 @@
 
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
-                            {!! Form::submit('Sprawdz czym pojedzie',['class'=>'btn btn-primary' ]) !!}
+                            {!! Form::submit('Sprawdź',['class'=>'btn btn-primary' ]) !!}
                         </div>
                     </div>
                     {!! Form::close() !!}

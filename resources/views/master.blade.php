@@ -10,66 +10,104 @@
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700&subset=latin,latin-ext" rel='stylesheet' type='text/css'>
-
     <!-- Styles -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link href="{{ URL::asset('css\custem.css') }}" rel="stylesheet">
-
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ URL::asset('css/custom.css')}}" rel="stylesheet">
     <style>
         body {
             font-family: 'Lato';
         }
-
         .fa-btn {
             margin-right: 6px;
         }
+
+
+        #piechart{
+            width: 100%;
+
+        }
+        .fa-btn {
+            margin-right: 6px;
+        }
+        .card{
+            padding:1rem;}
+        .nav{
+            margin-top:15px;
+        }
     </style>
 </head>
-<body id="app-layout">
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-none">
-            <a class="navbar-brand" href="/">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/predykcja">Predykcja</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/dodaj">Dodaj osobe</a>
-                    </li>
+<body >
+<div class="container-fluid">
+    <nav class="navbar navbar-default  ">
+        <div class="pasek_g"></div>
+        <div class="container">
+            <div class="navbar-header " style="height:75px;">
+                <!-- Collapsed Hamburger -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Branding Image -->
+
+                <a class="navbar-brand" href="/">
+                    <span><img src="{{ URL::asset('/img/UR_logo.png')}}" width="50" height="50" /></span>
+                    Aplikacje Internetowe II
+                </a>
+
+
+            </div>
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <!-- Left Side Of Navbar -->
+                <ul class="nav navbar-nav">
+                    <li><a href="/" >Start</a></li>
+                    <li><a href="/predykcja">Predykcja</a></li>
 
                 </ul>
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                    <li><a href="login.html">Zaloguj</a></li>
-                    <li><a href="">Rejestracja</a></li>
+                    <li><a class="nav-link active" href="/dodaj">Dodaj osobe</a></li>
+                    <!-- Authentication Links -->
+                    @guest
+                        <li><a href="{{ route('login') }}">Zaloguj</a></li>
+                        <li><a href="{{ route('register') }}">Zarejestruj</a></li>
+                    @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        Wyloguj
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    @endguest
                 </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
+</div>
 
 
-    </div>
-</nav>
-
-<!-- wrapper -->
-<div class="site-wrappper">
 
     <!-- .container -->
-    <div class="container site-content">
+    <div class="container">
 
         @yield('content')
 
     </div><!-- end of .container -->
 
-</div><!-- end of wrapper -->
+
 
 
 <!-- Footer -->
@@ -83,5 +121,6 @@
 <!-- JavaScripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </body>
 </html>

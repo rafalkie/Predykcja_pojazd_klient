@@ -1,8 +1,8 @@
 @extends('master')
 @section('content')
 <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-        <div class="card">
+    <div class="col-md-12">
+        <div class="card" >
             <div class="panel-body">
                 <!-- Formularz -->
 
@@ -45,7 +45,7 @@
                         {!! Form::label('wyksztalcenie','Wykształcenie:')!!}
                     </div>
                     <div class="col-md-6">
-                        {{ Form::select('wyksztalcenie', ['Podstawowe', 'Gimnazjalne','Zasadnicze','Średnie','Wyższe']) }}
+                        {{ Form::select('wyksztalcenie', ['Brak','Podstawowe', 'Gimnazjalne','Zasadnicze','Średnie','Wyższe']) }}
                     </div>
                 </div>
                 <div class="form-group">
