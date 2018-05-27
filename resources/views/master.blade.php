@@ -23,7 +23,8 @@
 
 
         #piechart{
-            width: 100%;
+            display: table;
+            margin: 0 auto;
 
         }
         .fa-btn {
@@ -33,6 +34,14 @@
             padding:1rem;}
         .nav{
             margin-top:15px;
+        }
+        .container-fluid{
+            padding:0 0;
+        }
+        .main{
+            min-height: 80vh;
+            /* equal to footer height */
+
         }
     </style>
 </head>
@@ -101,7 +110,7 @@
 
 
     <!-- .container -->
-    <div class="container">
+    <div class="container main ">
 
         @yield('content')
 
@@ -110,9 +119,9 @@
 
 
 
-<!-- Footer -->
-<footer class="site-footer">
-    <div class="container">
+<hr>
+<footer  >
+    <div class="footer-copyright text-center ">
         <p>&copy; Aplikacje Internetowe II - Rafał Kieroński, Jakub Kuśnierz , Lucjan Kużniar</p>
     </div>
 </footer>
