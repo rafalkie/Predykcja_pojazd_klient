@@ -97,7 +97,9 @@ Następnie dzielimy wartość z pierwszego kroku przez wartość z drugiego krok
 $samolot=(($samolot/$suma)*100);
 ```
 ## Baza danych
+
 Export bazy danych znajdziemy w zaznaczonym na żółto pliku.
+
 ![przechwytywanie](https://user-images.githubusercontent.com/26554041/40630055-9a271ef4-62cf-11e8-953c-c196fa07517a.PNG)
 
 
@@ -110,7 +112,9 @@ Export bazy danych znajdziemy w zaznaczonym na żółto pliku.
 ![zaloguj](https://user-images.githubusercontent.com/26554041/40630117-246a3f4c-62d0-11e8-93fa-38565b487447.PNG)
 
 W bazie danych zostało utworzone konto.
+
 Login: rafalkie2@gmail.com
+
 hasło: user123
 
 ## Toturial dla użytkownika
