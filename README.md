@@ -32,3 +32,9 @@ o	Predykcja wyboru środka transportu nowych klientów na podstawie danych histo
 # Użyte technologie
 o PHP , MySQL.
 o framework  Laravel, Bootstrap.
+o Google Chart libraries
+
+# Tabela konwersji wartości z formularza predykcji do bazy danych
+
+![przechwytywanie](https://user-images.githubusercontent.com/26554041/40628411-29458f40-62c5-11e8-92fb-2aec67b98e59.PNG)
+
