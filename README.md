@@ -101,5 +101,21 @@ $samolot=(($samolot/$suma)*100);
 
 ![ddde](https://user-images.githubusercontent.com/26554041/40628570-15c85b18-62c6-11e8-896e-5373f8cb6ead.png)
 
+## Toturial dla użytkownika
+
+Jeżeli chcemy polepszyć wyniki predykcji dodajemy kolejne osoby do bazy poprzez kliknięcie w przycisk dodaj osobe.
+Następnie wypełniamy formularz i zatwierdźamy niebieskim przyciskiem "Dodaj osobe".  
+
+![dodaj](https://user-images.githubusercontent.com/26554041/40629909-7ac90366-62ce-11e8-8620-5519af80334d.PNG)
+
+Predykcje środka transportu wykonujemy poprzez klikniecie w przycisk "Predykcja" , następnie wypełniamy poprawnie formularz i zatwierdźamy przyciskiem "Sprawdź".
+
+![predykcja](https://user-images.githubusercontent.com/26554041/40629908-7986fa58-62ce-11e8-88ef-62016ff61600.PNG)
+
+Wynik procentowy  dostajemy w wykresie kołowym. 
+![proc](https://user-images.githubusercontent.com/26554041/40629905-77e886bc-62ce-11e8-8f2e-3517d80966d8.PNG)
+
+
+
 
 
