@@ -78,7 +78,7 @@ if ($odleglosc < 5) {                   /// Jeżeli odległość mniejsza od 5 a
 }
 ```
 
-Podobnie jest z wynikiem procentowym samochodu gdy w formularzu osoba zaznaczy brak .
+Podobnie jest z wynikiem procentowym samochodu gdy w formularzu osoba zaznaczy brak posiadania samochodu .
 
 ```
 if ($wlasny_samochod == 0) {            /// Jeżeli nie posiada samochodu nie jest liczony procent dla samochodu
@@ -96,6 +96,10 @@ Następnie dzielimy wartość z pierwszego kroku przez wartość z drugiego krok
 ```
 $samolot=(($samolot/$suma)*100);
 ```
+
+# Encja bazy danych
+
+![ddde](https://user-images.githubusercontent.com/26554041/40628570-15c85b18-62c6-11e8-896e-5373f8cb6ead.png)
 
 
 
