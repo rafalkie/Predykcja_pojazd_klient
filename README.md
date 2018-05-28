@@ -23,7 +23,7 @@ Baza zawiera czynniki które wspomogą predykcje m.in. (wiek , płeć, odległo�
 Środki transportu które bierzemy pod uwagę: samochód , autobus , taxi , samolot, pociąg.
 
 ## Funkcjonalności:
-o	Logowanie 
+o	Logowanie , Rejestracja 
 
 o	Dodawanie nowych klientów do bazy
 
