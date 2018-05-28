@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 
 
+use App\Http\Requests\DodajOsobeRequest;
 use Request;
-use App\Http\Requests;
 use App\Posts as Posts;
 use App\Person;
+
 use DB;
 
 class PeopleController extends Controller
@@ -25,17 +26,17 @@ class PeopleController extends Controller
     /**
      * Wyciąga z formularza dane i zapisuje w bazie
      */
-    public function store(){
+   public function store(DodajOsobeRequest $request){
 
-
+        
 
         /// przekazanie z formularza danych do zmiennych
-       $wiek= Request::get('wiek');
+       $wiek= $request->get('wiek');
        $plec= Request::get('plec');
-       $odleglosc= Request::get('odleglosc');
+       $odleglosc= $request->get('odleglosc');
        $wlasny_samochod= Request::get('wlasny_samochod');
        $wyksztalcenie= Request::get('wyksztalcenie');
-       $dochod= Request::get('dochod');
+       $dochod= $request->get('dochod');
        $pojazd_id= Request::get('pojazd_id');
 
        //sprawdzanie za pomocą funkcji do jakiej liczby dopasować do wymyslonego przez nas klucza
@@ -46,10 +47,11 @@ class PeopleController extends Controller
 
        ///zapytanie zapisujące dane w bazie
         ///
-       DB::table('people')->insert( array('wiek' => $wiek, 'plec' => $plec,'odleglosc' => $odleglosc,
+      DB::table('people')->insert( array('wiek' => $wiek, 'plec' => $plec,'odleglosc' => $odleglosc,
            'wlasny_samochod' => $wlasny_samochod, 'wyksztalcenie' => $wyksztalcenie, 'dochod' => $dochod,
            'pojazd_id' => $pojazd_id+1));
-       return 'Poszło';
+
+        return redirect('/dodaj');
    }
 
 

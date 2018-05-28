@@ -17,6 +17,7 @@
         body {
             font-family: 'Lato';
         }
+        p {font-size: 16px}
         .fa-btn {
             margin-right: 6px;
         }

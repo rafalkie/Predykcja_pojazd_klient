@@ -1,14 +1,3 @@
-@extends('master')
-@section('content')
-<div class="row">
-    <div class="col-md-12">
-        <div class="card" >
-
-        </div>
-    </div>
-</div>
-@stop
-
 
 @extends('master')
 @section('content')
@@ -17,10 +6,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Predykcja środka transporta</div>
+                    <div class="panel-heading">Dodaj osobe do bazy danych</div>
 
                     <div class="panel-body">
                         <!-- Formularz -->
+
 
                         {!! Form::open(['url'=>'dodaj','class'=>'form-horizontal']) !!}
                         <div class="form-group">
@@ -80,11 +70,26 @@
                                 {{ Form::select('pojazd_id', ['Samochód', 'Taxi','Autobus','Pociąg','Samolot']) }}
                             </div>
                         </div>
+
+                        @if(count($errors)>0)
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{$error}} </li>
+                                    @endforeach
+
+                                </ul>
+
+                            </div>
+                        @endif
+
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 {!! Form::submit('Dodaj osobe',['class'=>'btn btn-primary' ]) !!}
                             </div>
                         </div>
+
                         {!! Form::close() !!}
 
                     </div>
