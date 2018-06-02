@@ -124,6 +124,7 @@ if ($dochod < 2) {
    ```
    
    Powyższe zabezpieczenie zmniejszające procent poszczególnych pojazdów zostały zastosowane dla bardziej wiarygodnych wyników
+   
 5.Krok
 
 Następnie dzielimy wartość z pierwszego kroku przez wartość z drugiego kroku i mnożymy całość przez 100 .
