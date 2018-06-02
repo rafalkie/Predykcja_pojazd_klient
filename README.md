@@ -66,7 +66,7 @@ $samochod += DB::table('people')->where( 'pojazd_id',1)->where($param2[$i],$para
 
 Zabezpieczamy jeszcze przed dużym wynikiem procentowym samolotu gdy wartość z bazy jest mniejsza niż 5 czyli do 250 km to procent samolotu jest dzielony przez 4 . Wtedy cześć procentową dostają pozostałe środki transportu.
 ```
-if ($odleglosc < 5) {                   /// Jeżeli odległość mniejsza od 5 a tu według naszej skali to 100 km to dzieli procenty predykcji samolotu przez 5
+if ($odleglosc < 5) {                  
     $samolotPom = (($samolot / $suma) * 100) / 4;
     $samolot = 0;
     $samochod += $samolotPom;
@@ -81,15 +81,27 @@ if ($odleglosc < 5) {                   /// Jeżeli odległość mniejsza od 5 a
 Podobnie jest z wynikiem procentowym samochodu gdy w formularzu osoba zaznaczy brak posiadania samochodu .
 
 ```
-if ($wlasny_samochod == 0) {            /// Jeżeli nie posiada samochodu nie jest liczony procent dla samochodu
-    ///
+if ($wlasny_samochod == 0) {            
+   
     $samochod = $samochod / 4;
     $samolot += $samochod;
     $autobus += $samochod;
     $pociag += $samochod;
     $taxi += $samochod;
    ```
+Również dochód gdy jest mniejszy niż 1600 zł zmniejszamy procent taxi o 1/5
 
+```
+if ($dochod < 2) {            
+            ///
+            $taxi = $taxi / 5;
+            $samolot += $taxi;
+            $autobus += $taxi;
+            $pociag += $taxi;
+            $samochod += $taxi;
+
+        }
+   ```
 5.Krok
 
 Następnie dzielimy wartość z pierwszego kroku przez wartość z drugiego kroku i mnożymy całość przez 100 .
