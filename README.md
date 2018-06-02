@@ -44,6 +44,26 @@ o Google Chart libraries
 
 2.Liczby przed dwukropkiem to liczby które są odpowiednikiem w bazie danych
 
+ ## Priorytety właściwości
+ Zadaniem priorytetów właściwości jest powiększenie o iloczyn właściwości z właśnie nadanym priorytetem 
+ 
+ Tablica priorytetów:
+ 
+```
+   $param3[1] = '3';        //wiek
+   $param3[2] = '0.5';      //płeć
+   $param3[3] = '4';        //odległośc
+   $param3[4] = '5';        //własny samochód
+   $param3[5] = '3';        //wykształcenie
+   $param3[6] = '1';        //dochód
+   
+ ```
+ Iloczyn właściwości:
+ ```
+ $samochod += (DB::table('people')->where('pojazd_id', 1)->where($param2[$i], $param[$i])->count())*($param3[$i]);
+ ```
+ 
+
 ## Działanie algorytmu:
 
 1.Krok
