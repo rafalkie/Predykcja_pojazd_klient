@@ -1,4 +1,4 @@
-# Predykcja_pojazd_klient
+# Dokumentacja 
 Aplikacje Internetowe II
 
 
@@ -11,6 +11,8 @@ Opiekun projektu: dr inż. Piotr Lasek
 Autorzy Projektu: Rafał Kieroński, Jakub Kuśnierz, Lucjan Kuźniar
 
 Data wykonania: Semestr letni rok akademicki 2017/2018
+
+Link Github: https://github.com/rafalkie/Predykcja_pojazd_klient
 
 
 ## Opis aplikacji:
