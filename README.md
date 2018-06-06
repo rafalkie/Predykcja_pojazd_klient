@@ -1,7 +1,7 @@
 # Dokumentacja 
 
+![pobrane](https://user-images.githubusercontent.com/26554041/41036492-823015a4-6990-11e8-8d2b-506000b2ccad.png)
 
-![pobrane](https://user-images.githubusercontent.com/26554041/41036405-3a5251d4-6990-11e8-96a6-aac507e4f296.png)
 
 
 
