@@ -1,7 +1,9 @@
 
-[center]  # Dokumentacja [/center]
+ # Dokumentacja 
+ 
+[center] 
 ![pobrane](https://user-images.githubusercontent.com/26554041/41036492-823015a4-6990-11e8-8d2b-506000b2ccad.png)
-
+[/center]
 
 
 
